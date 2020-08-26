@@ -3,7 +3,7 @@ const express = require("express");
 const path = require("path");
 const fs = require("fs");
 
-// Initialize our express server
+// Initialize our express servers existence
 const app = express();
 
 // We set a port up for listening, 
@@ -33,3 +33,38 @@ app.get("/api/notes", (err, res) => {
     res.json(noteInfo);
   });
   
+  app.post("/api/notes", function(req, res) {
+    try {
+      // Need to read the file from our directory 
+      noteInfo = fs.readFileSync("db/db.json", "utf8");
+      console.log(noteInfo);
+  
+      // Parse to get an array
+      noteInfo = JSON.parse(noteInfo);
+      req.body.id = noteInfo.length;
+
+      // Push the new note to your array
+      noteInfo.push(req.body);
+
+      // Use stringify method to be able to publish to it
+      noteInfo = JSON.stringify(noteInfo);
+
+      // Publish new file
+      fs.writeFile("db/db.json", noteInfo, "utf8", function(err) {
+        if (err) throw err;
+      });
+
+      // Use JSON to change the content back into ojects that the browser can then interpret 
+      console.log("POST request successful");
+      res.json(JSON.parse(noteInfo));
+  
+    } catch (err) {
+      throw err;
+    }
+  });
+
+  // Initialize Server
+  app.listen(PORT, () => {
+    console.log(`Listening on PORT: ${PORT}`);
+  });
+
