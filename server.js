@@ -2,7 +2,6 @@
 const express = require("express");
 const path = require("path");
 const fs = require("fs");
-const apidb = require("./Develop/db/db.json")
 
 // Initialize our express servers existence
 const app = express();
@@ -17,8 +16,6 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, "public")));
 
 let noteInfo = [];
-
-// Execute API call, send the output to the browser
 
 app.get("/api/notes", function(err, res) {
     try {
