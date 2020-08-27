@@ -1,6 +1,4 @@
-# Express-Note-Taker
-
-# Employee Template Generator
+# Express Note Taker
 
 ![License](https://img.shields.io/badge/License-MIT-blueviolet.svg)
 
@@ -63,4 +61,5 @@ Reach out to me via email regarding any questions or concerns with this project:
 
 # Media
 
-![](Images/screen1.JPG)
+![](Images/notes1.JPG)
+![](Images/notes2.JPG)
