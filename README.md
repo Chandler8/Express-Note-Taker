@@ -2,7 +2,7 @@
 
 ![License](https://img.shields.io/badge/License-MIT-blueviolet.svg)
 
-The following is a web application that will allow for users to create unique notes that they will then be able to save and delete accordingly. Users are also able to create as many new notes as they would like while still being able to access the previously created notes. Technologies used to create this app include; HTML, CSS, Node.js, Express.js, JSON, and more. This app can be found deployed via Heroku at the following link: https://safe-springs-10450.herokuapp.com/
+The following is a web application that will allow for users to create unique notes that they will then be able to save and delete accordingly. Users are also able to create as many new notes as they would like while still being able to access the previously created notes. Technologies used to create this app include; HTML, CSS, Node.js, Express.js, JSON, and more. This app can be found deployed via Heroku at the following link: https://express-note-taker-101.herokuapp.com/
 
 ## Description
 
